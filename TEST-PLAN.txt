@@ -1,0 +1,73 @@
+# REM Waste QA Automation Challenge - Test Plan
+
+## Objective
+
+To validate the functionality and stability of a simple React frontend and Node.js backend API by automating UI and API tests.
+
+---
+
+## What is Being Tested
+
+### UI Tests (Functional)
+
+- Login functionality with valid and invalid credentials.
+- Creating new items.
+- Editing existing items.
+- Deleting items.
+- Presence of expected data on UI after actions.
+
+### API Tests
+
+- POST `/login` endpoint for authentication.
+- GET `/items` to retrieve all items.
+- POST `/items` to create a new item.
+- PUT `/items/:id` to update an existing item.
+- DELETE `/items/:id` to delete an item.
+
+Each API test includes positive and negative test cases.
+-----------------------------------------------------------
+
+## Test Coverage Areas
+
+- Authentication and access control.
+- CRUD operations for items.
+- UI feedback and state after each user action.
+- Error handling for invalid inputs or unauthorized requests.
+
+-----------------------------------------------------------
+
+## Tools Used and Why
+
+- **React**: Frontend framework for building simple UI.
+- **Node.js + Express**: Backend API for handling data and authentication.
+- **Jest**: JavaScript testing framework, used here for API tests.
+- **Supertest**: For HTTP assertions on API endpoints.
+- **Cypress**: End-to-end UI testing framework for frontend automation.
+
+These tools provide a reliable, developer-friendly environment for test automation.
+
+-------------------------------------------------------------
+## How to Run the Tests
+
+1. Start the backend and frontend servers as per the README instructions.
+2. Navigate to the `tests` directory.
+3. Run API tests:
+npm run test:api
+
+4. Run UI tests:
+npm run test:ui
+
+---
+
+## Assumptions and Limitations
+
+- The backend is a simple in-memory server, no persistent database.
+- Authentication is a basic static token for demonstration.
+- Tests assume the servers are running locally on default ports.
+- UI tests focus on critical user flows, not exhaustive UI coverage.
+
+---
+
+## Summary
+
+This test plan covers functional and API testing for key user interactions with the application, ensuring basic features work correctly and are stable.
